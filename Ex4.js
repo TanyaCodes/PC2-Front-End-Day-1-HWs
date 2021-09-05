@@ -2,16 +2,32 @@
 //dd-mm-yy to yy-mm-dd
 // Options: Stack (Push and Pop); Splice; slice; for loop
 
+//Using stack operations (push and pop)
 
-//Using Stack operations
+let switchDate = (date) => {
+  let arr = date.split('-');
+  console.log(arr);
+  let newArr = [];
+  for (let i = 0; i < 3; i++) {
+    newArr.push(arr.pop())};
+  console.log(newArr);
+  let newDate = newArr.join("-");
+  console.log(newDate)
+};
+
+switchDate("05-09-21");
+
+
+
+//Using split and unshift
 let reverseDate = (date) => {
   let arr = date.split('-');
-  let newDate = [];
+  let newArr = [];
   for (let i = 0; i < arr.length; i++) {
-    newDate.unshift(arr[i]);
+    newArr.unshift(arr[i]);
   };
-  let newArr = newDate.join('-');
-  console.log(newArr)
+  let newDate = newArr.join('-');
+  console.log(newDate)
 };
 reverseDate("05-09-21");
 
@@ -22,4 +38,4 @@ let dateReverse = (date) => {
   return (`${year[2]}-${year[1]}-${year[0]}`)
 };
 //Calling the function and logging the result into the console
-console.log(dateReverse("04-09-21"));
+console.log(dateReverse("04-09-21"))
