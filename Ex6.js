@@ -38,4 +38,3 @@ expenses.forEach(function(num, index, array) {
   }})
 
 console.log(expenses)
-
